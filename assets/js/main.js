@@ -147,7 +147,7 @@
         //mean menu
         $('.main-menu').meanmenu({
             meanMenuContainer: '.mobile-menu',
-            meanScreenWidth: "767"
+            meanScreenWidth: "992"
         });
         
          // search form
