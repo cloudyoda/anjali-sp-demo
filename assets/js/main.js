@@ -168,6 +168,10 @@
         var observer = new MutationObserver(function(mutations) {
             if (oldHref != document.location.href) {
                 oldHref = document.location.href;
+                $('.main-menu').meanmenu({
+                    meanMenuContainer: '.mobile-menu',
+                    meanScreenWidth: "992"
+                });
                 $(".homepage-slider").owlCarousel(owlHomeSliderOptions);
                 // homepage slides animations
                 $(".homepage-slider").on("translate.owl.carousel", function(){
