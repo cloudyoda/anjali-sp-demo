@@ -147,7 +147,7 @@
         //mean menu
         $('.main-menu').meanmenu({
             meanMenuContainer: '.mobile-menu',
-            meanScreenWidth: "992"
+            meanScreenWidth: "767"
         });
         
          // search form
@@ -169,6 +169,18 @@
             if (oldHref != document.location.href) {
                 oldHref = document.location.href;
                 $(".homepage-slider").owlCarousel(owlHomeSliderOptions);
+                // homepage slides animations
+                $(".homepage-slider").on("translate.owl.carousel", function(){
+                    $(".hero-text-tablecell .subtitle").removeClass("animated fadeInUp").css({'opacity': '0'});
+                    $(".hero-text-tablecell h1").removeClass("animated fadeInUp").css({'opacity': '0', 'animation-delay' : '0.3s'});
+                    $(".hero-btns").removeClass("animated fadeInUp").css({'opacity': '0', 'animation-delay' : '0.5s'});
+                });
+
+                $(".homepage-slider").on("translated.owl.carousel", function(){
+                    $(".hero-text-tablecell .subtitle").addClass("animated fadeInUp").css({'opacity': '0'});
+                    $(".hero-text-tablecell h1").addClass("animated fadeInUp").css({'opacity': '0', 'animation-delay' : '0.3s'});
+                    $(".hero-btns").addClass("animated fadeInUp").css({'opacity': '0', 'animation-delay' : '0.5s'});
+                });
             }
         });
         
