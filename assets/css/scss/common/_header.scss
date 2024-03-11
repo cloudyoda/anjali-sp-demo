@@ -191,7 +191,7 @@ ul.navbar-nav {
   .desktop_menu {
     position: absolute;
     float:right;
-    right: -380px;
+    display:none;
     transition: 0.4s ease-in-out;
     top:50px;
     background: #0c1923;
@@ -216,7 +216,9 @@ ul.navbar-nav {
     padding-top: 0px;
   }
   .mobile_menu {
-    right: 0;
+    float: right;
+    display:block;
+    right:0;
     transition: 0.4s ease-in-out;
   }
 
@@ -230,7 +232,7 @@ ul.navbar-nav {
     
   
     &.is-sticky .top-header-area {
-      position: absolute!important;
+      position: absolute !important;
 	    background-color: transparent;
       padding: 5px 0;
       box-shadow: none;
