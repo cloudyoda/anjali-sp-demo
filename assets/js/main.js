@@ -159,8 +159,7 @@
 
     
     jQuery(window).on("load",function(){
-        //jQuery(".loader").fadeOut(1000);
-        var bodyList = document.querySelector("body")
+        var bodyList = document.querySelector("body");
         var observer = new MutationObserver(function(mutations) {
             if (oldHref != document.location.href) {
                 oldHref = document.location.href;
