@@ -1,0 +1,285 @@
+/* -----------------------------------------------------------------------------
+
+# Header Styles
+
+----------------------------------------------------------------------------- */
+ul.navbar-nav li.nav-item {
+  a.nav-link, &.active a.nav-link {
+    color: $text-color;
+  }
+}
+
+.top-header-area {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  padding: 5px 0;
+
+  &.white ul.navbar-nav li.nav-item {
+    a.nav-link, &.active a.nav-link {
+      color: $white-color;
+    }
+  }
+}
+
+ul.navbar-nav li.nav-item {
+  a.nav-link, &.active a.nav-link {
+    color: $white-color;
+    font-weight: 700;
+    margin-right: 14px;
+  }
+}
+
+a.navbar-brand img {
+  max-width: 150px;
+}
+
+/**
+New Menu
+*/
+.desktop_menu {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li.current-list-item > a {
+      color: $primary-color;
+    }
+
+    li {
+    display: inline-block;
+    &:hover > a {
+      color: $primary-color;
+    }
+
+    a {
+      transition: 0.3s ease-in-out;
+    }
+
+      a {
+        color: $white-color;
+        text-decoration: none;
+        font-weight: 550;
+        font-size: 1.05em;
+        display: block;
+        padding: 25px;
+      }
+    }
+    > li {
+      position: relative;
+    }
+
+    ul.sub-menu {
+      position: absolute;
+      background-color: $white-color;
+      width: 220px;
+      padding: 15px 15px;
+      margin: 0;
+      left: 0;
+      top: 50px;
+      border-radius: 3px;
+      transition: 0.3s;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: 0 0 20px #555555;
+
+      li {
+        a {
+          color: #555;
+          font-weight: 600;
+          padding: 7px 10px;
+          font-size: 13px;
+        }
+
+        display: block;
+        text-align: left;
+      }
+    }
+
+    > li:hover ul {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    li:last-child a {
+      display: inline-block;
+    }
+  }
+}
+.menu-icon {
+  display: none;
+}
+
+.site-logo {
+  float: left;
+  max-width: 170px;
+
+  #logo-blue {
+    display: none;
+  }
+  #logo-white {
+    display: block;
+  }
+  padding: 6px 0;
+}
+
+.header-icons a {
+  color: $white-color;
+  display: inline-block;
+  padding: 10px;
+}
+
+.top-header-area.sepherate-header {
+  ul li > a, .header-icons a {
+    color: $text-color;
+  }
+}
+
+.top-header-area .header-icons a {
+  &:hover {
+    color: $primary-color;
+  }
+
+  transition: 0.3s;
+}
+
+.sticky-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999 !important;
+
+  &.is-sticky .top-header-area {
+    background-color: $white-color;
+    padding: 5px 0;
+    box-shadow: 0 4px 10px #0000001a;
+
+    .site-logo {
+      float:left;
+      #logo-blue {
+        display: block;
+      }
+      #logo-white {
+        display: none;
+      }
+    }
+
+    .desktop_menu {
+      ul {
+        li {    
+          a {
+            color: $primary-color;
+          }
+      }}
+    }
+  }
+}
+
+.top-header-area {
+  transition: 0.3s ease-in-out;
+}
+
+ul.navbar-nav {
+  margin: 0 auto;
+}
+
+//Searchbar
+.search-area {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 5555;
+  background-color: #051922;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+span.close-btn {
+  position: absolute;
+  right: 0%;
+  color: $white-color;
+  top: 5%;
+  cursor: pointer;
+}
+
+.search-area {
+  height: 100%;
+
+  div {
+    height: 100%;
+  }
+}
+
+.search-bar {
+  height: 100%;
+  display: table;
+  width: 100%;
+}
+
+a.mobile-show {
+  display: none;
+}
+
+.search-area .search-bar div.search-bar-tablecell {
+  display: table-cell;
+  vertical-align: middle;
+  height: auto;
+}
+
+.search-bar-tablecell {
+  input {
+    border: none;
+    padding: 15px;
+    width: 60%;
+    background-color: transparent;
+    border-bottom: 1px solid $primary-color;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: $white-color;
+  }
+
+  button[type=submit] {
+    border: none;
+    background-color: $primary-color;
+    padding: 15px 30px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 50px;
+    font-weight: 700;
+  }
+
+  input::placeholder {
+    color: $white-color;
+  }
+
+  button[type=submit] i {
+    margin-left: 5px;
+  }
+}
+
+.search-area {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+
+  &.search-active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 999;
+  }
+}
+
+.search-bar-tablecell h3 {
+  color: $white-color;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
