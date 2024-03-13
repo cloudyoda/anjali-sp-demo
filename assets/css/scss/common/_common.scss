@@ -326,3 +326,7 @@ a.boxed-btn, a.bordered-btn,  a.cart-btn{
 
   padding-top: 200px;
 }
+
+.row:before, .row:after {
+  display: flex !important;
+  }
