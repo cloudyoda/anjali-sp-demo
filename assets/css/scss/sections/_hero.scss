@@ -167,25 +167,31 @@ input[type="submit"] {
   }
 }
 
-div.owl-controls, .owl-controls div {
-  height: auto;
-  top: 50%;
-  color: $primary-color;
-  font-size: 48px;
+div.owl-nav, .owl-nav div {
+  margin-top: 0 !important;
+  height: auto !important;
+  top: 50% !important;
+  color: $primary-color !important;
+  font-size: 48px !important;
+  transition: .3s !important;
 }
 
 .homepage-slider {
   position: relative;
 }
 
-.owl-prev {
+.owl-nav, .owl-prev
+{
   position: absolute;
-  left: 60px;
-  margin-top: -30px;
+  left: 20px;
+  margin-top: -30px !important;
+  background: none !important;
 }
 
-.owl-next {
+.owl-nav, .owl-next
+{
   position: absolute;
-  right: 60px;
-  margin-top: -30px;
+  right: 20px;
+  margin-top: -30px !important;
+  background: none !important;
 }
